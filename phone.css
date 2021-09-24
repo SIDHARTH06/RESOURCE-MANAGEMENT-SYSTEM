@@ -1,0 +1,8 @@
+.medium a,.medium button,.medium input
+{
+    display: none;
+}
+.menu-toggle
+{
+    display: block;
+}
