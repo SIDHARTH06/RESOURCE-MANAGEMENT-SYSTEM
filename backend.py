@@ -27,13 +27,26 @@ storage=firebase.storage()
 #     print("Try again")
 
 #sign up
-email=input("Enter your email")
-password=input("Enter your password")
-confirmpassword=input("Confirm password")
+# email=input("Enter your email")
+# password=input("Enter your password")
+# confirmpassword=input("Confirm password")
+#
+# if password==confirmpassword:
+#     try:
+#         auth.create_user_with_email_and_password(email,password)
+#         print("Success!")
+#     except:
+#         print("email already exists")
 
-if password==confirmpassword:
-    try:
-        auth.create_user_with_email_and_password(email,password)
-        print("Success!")
-    except:
-        print("email already exists")
+#storage
+
+# #upload
+# filename=input("Enter the name of the file you want to upload")
+# cloudfilename=input("Enter the name of the file on the cloud")
+# storage.child(cloudfilename).put(filename)
+#
+# print(storage.child(cloudfilename).get_url(None))
+
+#download
+cloudfilename=input("Enter the name of file you want to download")
+storage.child(cloudfilename).download("","downloaded.txt")
