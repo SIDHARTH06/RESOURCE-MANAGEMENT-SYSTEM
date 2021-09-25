@@ -12,11 +12,11 @@ firebaseConfig = { 'apiKey': "AIzaSyDHhm8S1tHYX8pPEUb2jo4j1a0rOz-4o5A",
 firebase=pyrebase.initialize_app(firebaseConfig)
 
 # db=firebase.database()
-# auth=firebase.auth()
-storage=firebase.storage()
+auth=firebase.auth()
+#storage=firebase.storage()
 
 # authentication
-#login
+# #login
 # email=input("Enter your email")
 # password=input("Enter your password")
 # try:
@@ -27,16 +27,17 @@ storage=firebase.storage()
 #     print("Try again")
 
 #sign up
-# email=input("Enter your email")
-# password=input("Enter your password")
-# confirmpassword=input("Confirm password")
-#
-# if password==confirmpassword:
-#     try:
-#         auth.create_user_with_email_and_password(email,password)
-#         print("Success!")
-#     except:
-#         print("email already exists")
+email=input("Enter your email")
+password=input("Enter your password")
+confirmpassword=input("Confirm password")
+if password==confirmpassword:
+    try:
+        auth.create_user_with_email_and_password(email,password)
+        print("Account has been created successfully!")
+    except:
+        print("email already exists")
+else:
+    print("Both the passwords are not matching")
 
 #storage
 
@@ -47,6 +48,13 @@ storage=firebase.storage()
 #
 # print(storage.child(cloudfilename).get_url(None))
 
-#download
-cloudfilename=input("Enter the name of file you want to download")
-storage.child(cloudfilename).download("","downloaded.txt")
+# #download
+# cloudfilename=input("Enter the name of file you want to download")
+# storage.child(cloudfilename).download("","downloaded.txt")
+
+# #reading a file
+
+# cloudfilename=input("Enter the name of file you want to read")
+# url=storage.child(cloudfilename).get.url(None)
+# s=urllib.request.urlopen(url).read()
+# print(s)
