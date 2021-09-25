@@ -103,7 +103,7 @@ nav ul li a:hover
     width: 100vw;
     height: 50vh;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px 0px;
     /* display: none; */
@@ -117,6 +117,7 @@ nav ul li a:hover
     font-weight: 700;
     font-size: 1.7rem;
     text-decoration: none;
+    
 }
 .menu li a:hover
 {
