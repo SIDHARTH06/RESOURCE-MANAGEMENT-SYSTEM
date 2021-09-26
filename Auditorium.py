@@ -37,7 +37,7 @@ def check(roll,date,starttime,endtime):
             message= "That slot is already booked please try another one,the available slots on",date,"are "
             for i in range(9,24):
                 if i not in booked:
-                    message= message+ i+" to "+i+1
+                    message= message+ str(i)+" to "+str(i+1)
 
         else:
             c.execute("INSERT INTO aud VALUES(?,?,?,?)",tup)
