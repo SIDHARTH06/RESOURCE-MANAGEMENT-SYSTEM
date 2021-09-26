@@ -42,6 +42,6 @@ def check(roll,date,starttime,endtime):
         else:
             c.execute("INSERT INTO aud VALUES(?,?,?,?)",tup)
             message="You have booked the slot sucessfully"
-    return message
     conn.commit()
     conn.close()
+    return message
