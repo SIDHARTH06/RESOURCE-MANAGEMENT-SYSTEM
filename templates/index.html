@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 952px)" href="phone.css">
-   
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 952px)" href="../static/phone.css">
+    <link rel="stylesheet" href="../static/form.css">
    
 
     <title>Document</title>
@@ -34,23 +34,23 @@
       
        
     </div>
+    <div class="container">
+        <form action="/result" class="form-contol" method="post">
+            <label for="Roll no">Roll-no</label>
+            <input type="text" name="roll" id="Rollno">
+            <label for="Date">Date in DDMMYY</label>
+            <input type="text" name="date" id="date">
+            <label for="begin">Start-time in 24 hrs format</label>
+            <input type="text" name="start" id="begin" placeholder="dddmmyy" value="">
+            <label for="end">end-time in the same format</label>
+            <input type="text" name="end" id="end" placeholder="dddmmyy" value="">
+            <input type="submit" value="Submit">
+        </form>
 </ul>
-
-<div class="container">
-    <form action="action.py" class="form-contol">
-        <label for="Roll no">Roll-no</label>
-        <input type="text" name="Rollno" id="Rollno">
-        <label for="Date">Date</label>
-        <input type="date" name="date" id="date">
-        <label for="begin">Start-time</label>
-        <input type="text" name="begin" id="begin" placeholder="" value="">
-        <label for="end">end-time</label>
-        <input type="text" name="time" id="end" placeholder="" value="">
-        <input type="submit" value="Submit">
-    </form>
+<br><br> <h3>BOOKING STATUS: {{ msg }}</h3>
  </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="script.js" ></script>
+<script src="../static/script.js" ></script>
 
 
 </html>
