@@ -14,15 +14,15 @@ def check(roll,date,starttime,endtime):
     if int(starttime)<int(audopen) or int(endtime)<int(audopen) or int(starttime)>int(audclose) or int(endtime)>int(audclose):
         message= "enter a valid time frame, Auditorium functions from 9AM to 12AM"
 
-    elif(int(starttime)>int(endtime)):
-        message= "start time should be greater than endtime, Please try again"
+    elif int(starttime)>int(endtime):
+        message= "start time cannot be greater than endtime, Please try again"
 
     else:
         c.execute("SELECT * FROM aud")
         items=c.fetchall()
         booked=[]
         for i in items:
-            if (i[1]==date):
+            if i[1]==date:
                 for j in range(i[2],i[3]):
                     booked.append(j)
 
