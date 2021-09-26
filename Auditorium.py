@@ -13,7 +13,7 @@ def check(roll,date,starttime,endtime):
     audclose=24
     if int(starttime)<int(audopen) or int(endtime)<int(audopen) or int(starttime)>int(audclose) or int(endtime)>int(audclose):
         message= "enter a valid time frame, Auditorium functions from 9AM to 12AM"
- 
+
     elif(int(starttime)>int(endtime)):
         message= "start time should be greater than endtime, Please try again"
 
@@ -34,10 +34,10 @@ def check(roll,date,starttime,endtime):
 
 
         if t==1:
-            message= "That slot is already booked please try another one,the available slots on",date,"are "
+            message= "That slot is already booked please try another one,the available slots on"+str(date)+"are "
             for i in range(9,24):
                 if i not in booked:
-                    message= message+ i+" to "+i+1
+                    message= message+ str(i)+" to "+str(i+1)
 
         else:
             c.execute("INSERT INTO aud VALUES(?,?,?,?)",tup)
