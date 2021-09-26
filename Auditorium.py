@@ -1,12 +1,12 @@
-import sqlite3
 
 
-message=""
-conn=sqlite3.connect('aud.db')
-
-c=conn.cursor()
 #c.execute("CREATE TABLE aud(RollNO text, date integer, starttime integer,endtime integer)")
 def check(roll,date,starttime,endtime):
+    import sqlite3
+    message=""
+    conn=sqlite3.connect('aud.db')
+
+    c=conn.cursor()
     tup=tuple([roll,date,starttime,endtime])
 
     audopen=9
